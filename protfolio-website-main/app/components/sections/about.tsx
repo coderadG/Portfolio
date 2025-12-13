@@ -18,7 +18,7 @@ const About = () => {
                 </h1>
 
                 <p className={styles.description}>
-                    I am an undergraduate at IIT Delhi with a strong foundation in data structures, algorithms, and object-oriented programming. I'm passionate about solving complex problems, optimizing systems, and delivering impactful software.
+                    I am an undergraduate at IIT Delhi with a strong foundation in data structures, algorithms, and object-oriented programming. I&apos;m passionate about solving complex problems, optimizing systems, and delivering impactful software.
                 </p>
 
                 <p className={styles.description}>
