@@ -14,7 +14,7 @@ const About = () => {
 
             <div className={styles.aboutContent}>
                 <h1 className={styles.title}>
-                    I'm <span className={styles.highlight}>Radhika Goel</span>, a software developer passionate about building reliable and real-world applications. 
+                    I&apos;m <span className={styles.highlight}>Radhika Goel</span>, a software developer passionate about building reliable and real-world applications. 
                 </h1>
 
                 <p className={styles.description}>
