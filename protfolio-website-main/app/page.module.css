@@ -1,0 +1,775 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(29, 205, 159, 0.3);
+    border-radius: 50%;
+    animation: orbit 15s linear infinite;
+    pointer-events: none;
+}
+
+.about .circle2 {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgba(29, 205, 159, 0.4);
+    border-radius: 50%;
+    animation: orbit-reverse 20s linear infinite;
+    pointer-events: none;
+}
+
+.about .circle3 {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(29, 205, 159, 0.4);
+    border-radius: 50%;
+    animation: float-circle 12s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.about .circle4 {
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    width: 120px;
+    height: 120px;
+    border: 2px solid rgba(29, 205, 159, 0.3);
+    border-radius: 50%;
+    animation: pulse-circle 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.about .circle5 {
+    content: '';
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(29, 205, 159, 0.5);
+    border-radius: 50%;
+    animation: orbit-small 10s linear infinite;
+    pointer-events: none;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 60px solid rgba(29, 205, 159, 0.15);
+    animation: triangle-float 12s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.about .hexagon {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 30%;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgba(29, 205, 159, 0.3);
+    transform: rotate(30deg);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
+    animation: hexagon-spin 18s linear infinite;
+    pointer-events: none;
+}
+
+.about .diamond {
+    content: '';
+    position: absolute;
+    bottom: 40%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid rgba(29, 205, 159, 0.4);
+    transform: rotate(45deg);
+    animation: diamond-bounce 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.about .star {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    width: 25px;
+    height: 25px;
+    background: rgba(29, 205, 159, 0.3);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: star-twinkle 6s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.about .pentagon {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 3%;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgba(29, 205, 159, 0.4);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    animation: pentagon-drift 14s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.about .octagon {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 40%;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid rgba(29, 205, 159, 0.35);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    animation: octagon-rotate 16s linear infinite;
+    pointer-events: none;
+}
+
+.about .rhombus {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 8%;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid rgba(29, 205, 159, 0.35);
+    transform: rotate(30deg);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: rhombus-wobble 11s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.intro::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -15%;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    border: 3px solid rgba(29, 205, 159, 0.25);
+    transform: rotate(45deg);
+    animation: square-spin 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+
+@keyframes triangle-float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.3;
+    }
+}
+
+@keyframes hexagon-spin {
+    0% {
+        transform: rotate(30deg) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: rotate(210deg) scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(390deg) scale(1);
+        opacity: 0.3;
+    }
+}
+
+@keyframes diamond-bounce {
+    0%, 100% {
+        transform: rotate(45deg) translateY(0px);
+        opacity: 0.4;
+    }
+    50% {
+        transform: rotate(45deg) translateY(-25px);
+        opacity: 0.7;
+    }
+}
+
+@keyframes star-twinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.3) rotate(180deg);
+    }
+}
+
+@keyframes pentagon-drift {
+    0%, 100% {
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+        opacity: 0.4;
+    }
+    33% {
+        transform: translateX(30px) translateY(-20px) rotate(120deg);
+        opacity: 0.6;
+    }
+    66% {
+        transform: translateX(-20px) translateY(15px) rotate(240deg);
+        opacity: 0.5;
+    }
+}
+
+@keyframes octagon-rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+        opacity: 0.35;
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        opacity: 0.35;
+    }
+}
+
+@keyframes rhombus-wobble {
+    0%, 100% {
+        transform: rotate(30deg) translateX(0px) scale(1);
+        opacity: 0.35;
+    }
+    25% {
+        transform: rotate(45deg) translateX(15px) scale(1.1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: rotate(15deg) translateX(-10px) scale(0.9);
+        opacity: 0.4;
+    }
+    75% {
+        transform: rotate(60deg) translateX(20px) scale(1.05);
+        opacity: 0.45;
+    }
+}
+
+@keyframes square-spin {
+    0% {
+        transform: rotate(45deg) scale(1);
+        opacity: 0.25;
+    }
+    50% {
+        transform: rotate(225deg) scale(1.2);
+        opacity: 0.4;
+    }
+    100% {
+        transform: rotate(405deg) scale(1);
+        opacity: 0.25;
+    }
+}
+
+@keyframes orbit-reverse {
+    0% {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg) translateX(100px) rotate(360deg);
+    }
+}
+
+@keyframes float-circle {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0.4;
+    }
+    33% {
+        transform: translateY(-30px) translateX(20px);
+        opacity: 0.6;
+    }
+    66% {
+        transform: translateY(20px) translateX(-15px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes pulse-circle {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.5;
+    }
+}
+
+@keyframes orbit-small {
+    0% {
+        transform: rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+}
+
+.greeting {
+    font-size: 1.8rem;
+    color: #888;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.nameButton {
+    background: none;
+    border: none;
+    cursor: default;
+    padding: 0;
+    position: relative;
+    margin-top: -0.5rem;
+}
+
+.nameText {
+    font-size: 6.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #fff 0%, #888 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -2px;
+    text-align: center;
+    position: relative;
+}
+
+.description {
+    font-size: 1.5rem;
+    color: #888;
+    text-align: center;
+    max-width: 700px;
+    line-height: 1.6;
+    margin: 1.5rem 0 3rem;
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+}
+
+.resumeButton {
+    background: linear-gradient(135deg, #1dcd9f 0%, #16a085 100%);
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 8px 25px rgba(29, 205, 159, 0.3),
+        0 0 0 1px rgba(29, 205, 159, 0.1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.resumeButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.resumeButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 15px 35px rgba(29, 205, 159, 0.4),
+        0 0 0 1px rgba(29, 205, 159, 0.2);
+    background: linear-gradient(135deg, #16a085 0%, #138f7a 100%);
+}
+
+.resumeButton:hover::before {
+    left: 100%;
+}
+
+.resumeButton:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .about {
+        padding: 6rem 3rem;
+    }
+    
+    .greeting {
+        font-size: 4rem;
+    }
+    
+    .nameText {
+        font-size: 7rem;
+    }
+    
+    .description {
+        font-size: 1.6rem;
+        max-width: 800px;
+    }
+    
+    .resumeButton {
+        padding: 1.2rem 3rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Hide some shapes on smaller screens for better performance and cleaner look */
+@media (max-width: 1200px) {
+    .about .circle5,
+    .about .octagon {
+        display: none;
+    }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .about {
+        padding: 5rem 2.5rem;
+    }
+    
+    .greeting {
+        font-size: 3.8rem;
+    }
+    
+    .nameText {
+        font-size: 6.5rem;
+    }
+    
+    .description {
+        font-size: 1.4rem;
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about .circle2,
+    .about .hexagon,
+    .about .pentagon {
+        display: none;
+    }
+    
+    /* Adjust remaining shapes for better spacing */
+    .about .circle3 {
+        top: 20%;
+        left: 75%;
+    }
+    
+    .about .diamond {
+        bottom: 30%;
+        right: 10%;
+    }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .about {
+        padding: 4rem 2rem;
+    }
+    
+    .intro {
+        gap: 2.5rem;
+    }
+    
+    .greeting {
+        font-size: 3.2rem;
+    }
+    
+    .nameText {
+        font-size: 5.5rem;
+    }
+    
+    .description {
+        font-size: 1.3rem;
+        max-width: 650px;
+    }
+    
+    .resumeButton {
+        padding: 1rem 2.2rem;
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .circle4,
+    .about .star,
+    .about .rhombus {
+        display: none;
+    }
+    
+    /* Keep only essential shapes and adjust their positions */
+    .about .circle3 {
+        top: 15%;
+        left: 80%;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .about .diamond {
+        bottom: 20%;
+        right: 15%;
+        width: 25px;
+        height: 25px;
+    }
+    
+    /* Adjust triangle position */
+    .about::after {
+        bottom: 10%;
+        right: 5%;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 45px solid rgba(29, 205, 159, 0.15);
+    }
+}
+
+/* Tablet Portrait (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .about {
+        padding: 3rem 1.5rem;
+        min-height: 90vh;
+    }
+    
+    .intro {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .greeting {
+        font-size: 2.8rem;
+        margin-top: 0;
+    }
+    
+    .nameText {
+        font-size: 4.5rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        max-width: 500px;
+    }
+    
+    .resumeButton {
+        padding: 0.9rem 2.2rem;
+        font-size: 1.05rem;
+    }
+}
+
+/* Mobile Landscape (376px - 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+    .about {
+        padding: 2.5rem 1rem;
+        min-height: 85vh;
+    }
+    
+    .intro {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .greeting {
+        font-size: 2.2rem;
+        margin-top: 0;
+    }
+    
+    .nameText {
+        font-size: 3.5rem;
+    }
+    
+    .description {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        max-width: 400px;
+        line-height: 1.5;
+    }
+    
+    .resumeButton {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+        gap: 0.6rem;
+    }
+    
+    /* Hide all shapes except one circle and triangle */
+    .about .circle3 {
+        display: none;
+    }
+    
+    .about .diamond {
+        display: none;
+    }
+    
+    /* Keep only the main orbiting circle, make it smaller */
+    .about::before {
+        width: 60px;
+        height: 60px;
+        border-width: 1px;
+        top: 15%;
+        left: 10%;
+    }
+    
+    /* Keep triangle but make it smaller */
+    .about::after {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 30px solid rgba(29, 205, 159, 0.1);
+        bottom: 15%;
+        right: 10%;
+    }
+}
+
+/* Mobile Portrait (320px - 375px) */
+@media (max-width: 375px) {
+    .about {
+        padding: 2rem 0.8rem;
+        min-height: 80vh;
+    }
+    
+    .intro {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .greeting {
+        font-size: 1.8rem;
+        margin-top: 0;
+    }
+    
+    .nameText {
+        font-size: 2.8rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        max-width: 300px;
+        line-height: 1.4;
+    }
+    
+    .resumeButton {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+        gap: 0.5rem;
+    }
+    
+    /* Minimal shapes for very small screens */
+    .about::before {
+        width: 40px;
+        height: 40px;
+        border-width: 1px;
+        top: 20%;
+        left: 15%;
+        opacity: 0.5;
+    }
+    
+    .about::after {
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 20px solid rgba(29, 205, 159, 0.08);
+        bottom: 20%;
+        right: 15%;
+    }
+}
+
+/* Very Small Devices (below 320px) */
+@media (max-width: 319px) {
+    .about {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .greeting {
+        font-size: 1.5rem;
+    }
+    
+    .nameText {
+        font-size: 2.2rem;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+        max-width: 250px;
+    }
+    
+    .resumeButton {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    /* Hide all background shapes for cleanest look */
+    .about::before,
+    .about::after {
+        display: none;
+    }
+}

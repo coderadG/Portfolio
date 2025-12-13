@@ -1,0 +1,127 @@
+.skills {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.sectionTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.skillsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 3rem;
+}
+
+.skillTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.skillList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 60px;
+}
+
+.skillItem:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.skillItem h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .skillList {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills {
+        padding: 1rem;
+        gap: 3rem;
+    }
+    
+    .skillList {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .skillItem {
+        padding: 0.8rem 1rem;
+        min-height: 50px;
+    }
+    
+    .skillTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skillList {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill {
+        align-items: center;
+    }
+    
+    .skillTitle {
+        text-align: center;
+        align-self: center;
+    }
+}

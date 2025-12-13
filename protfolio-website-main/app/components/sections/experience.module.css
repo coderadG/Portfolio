@@ -1,0 +1,318 @@
+.experience {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(45deg, transparent 24%, rgba(29, 205, 159, 0.05) 25%, rgba(29, 205, 159, 0.05) 26%, transparent 27%, transparent 74%, rgba(29, 205, 159, 0.05) 75%, rgba(29, 205, 159, 0.05) 76%, transparent 77%);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent 0%, #1dcd9f 20%, #1dcd9f 80%, transparent 100%);
+    transform: translateX(-50%);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timelineItem:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timelineItem:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timelineMarker {
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timelineDot {
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #1dcd9f, #16a085);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 0 4px #0a0a0a,
+        0 0 0 8px rgba(29, 205, 159, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 
+            0 0 0 4px #0a0a0a,
+            0 0 0 8px rgba(29, 205, 159, 0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 
+            0 0 0 4px #0a0a0a,
+            0 0 0 12px rgba(29, 205, 159, 0.1);
+    }
+}
+
+.timelineContent {
+    width: calc(50% - 2rem);
+    margin: 0 2rem;
+}
+
+.timelineItem:nth-child(odd) .timelineContent {
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+    margin-right: 0;
+    margin-left: 2rem;
+}
+
+.experienceCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experienceCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1dcd9f, #16a085);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.experienceCard:hover {
+    transform: translateY(-5px);
+    border-color: rgba(29, 205, 159, 0.5);
+    box-shadow: 0 20px 40px rgba(29, 205, 159, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.experienceCard:hover::before {
+    opacity: 1;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.companyInfo h2.company {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1dcd9f;
+    margin: 0 0 0.5rem 0;
+}
+
+.companyInfo h3.position {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+.experienceDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: right;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: #1dcd9f;
+    font-weight: 600;
+}
+
+.location {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech {
+    background: rgba(29, 205, 159, 0.1);
+    color: #1dcd9f;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(29, 205, 159, 0.3);
+}
+
+.githubLink {
+    margin-bottom: 1.5rem;
+}
+
+.githubLink a {
+    color: #1dcd9f;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.githubLink a:hover {
+    color: #16a085;
+}
+
+.achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.achievement {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.bullet {
+    color: #1dcd9f;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: -0.1rem;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience {
+        padding: 3rem 1rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .timeline::before {
+        left: 2rem;
+    }
+    
+    .timelineItem {
+        flex-direction: column !important;
+        margin-bottom: 3rem;
+    }
+    
+    .timelineItem:nth-child(odd),
+    .timelineItem:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .timelineMarker {
+        left: 2rem;
+        transform: translateX(-50%);
+    }
+    
+    .timelineContent {
+        width: calc(100% - 4rem);
+        margin: 0 0 0 4rem;
+    }
+    
+    .timelineItem:nth-child(odd) .timelineContent,
+    .timelineItem:nth-child(even) .timelineContent {
+        margin: 0 0 0 4rem;
+    }
+    
+    .experienceCard {
+        padding: 1.5rem;
+    }
+    
+    .cardHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .experienceDetails {
+        text-align: left;
+    }
+    
+    .achievement {
+        font-size: 0.9rem;
+    }
+} 
