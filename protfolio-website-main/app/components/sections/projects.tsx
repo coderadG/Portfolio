@@ -110,7 +110,7 @@ const Projects = () => {
             
             <div className={styles.viewAllContainer}>
                 <a 
-                    href="https://github.com/lakshya1goel" 
+                    href="https://github.com/coderadG" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={styles.viewAllButton}
