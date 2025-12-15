@@ -37,7 +37,7 @@ export default function Home() {
             </p>
           </div>
           <a 
-              href="https://drive.google.com/file/d/1sneAg8SmsvQm81MQp5ciFhJIsRSkdzzH/view?usp=drivesdk" 
+              href="https://drive.google.com/file/d/1OKCuG5EpOmtOzF45dKM7_8-JAY09F38f/view?usp=drivesdk" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.resumeButton}
